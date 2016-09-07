@@ -18,7 +18,10 @@ sudo pip install -r requirements.txt
 
 ## Usage
 
-usage: nav_selenium_full-vX.X.py [-h] -f FILE_CSV
+```
+nav_selenium_full-vX.X.py [-h] -f FILE_CSV
+```
+
 
 CSV syntax:
 
