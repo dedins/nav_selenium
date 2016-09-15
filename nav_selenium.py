@@ -140,6 +140,7 @@ user_agent = (
 dcap = dict(DesiredCapabilities.PHANTOMJS)
 dcap["phantomjs.page.settings.userAgent"] = user_agent
 
+crm_host = raw_input("CRM Host:");
 username = raw_input("Username:");
 passphrase = getpass.getpass("Password:");
 
@@ -148,8 +149,7 @@ try:
 	driver = webdriver.Remote("http://localhost:4444/wd/hub", webdriver.DesiredCapabilities.PHANTOMJS.copy())
 	driver.set_window_size(1600, 900)
 	print "------------------------------------------------"
-	#driver.get("http://repubblica.it")
-	driver.get("https://navisionweb.lutech.it")
+	driver.get(crm_host)
 except Exception, e:
 	error_screen("phantomjs")
 else:
